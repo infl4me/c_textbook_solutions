@@ -3,19 +3,17 @@
 /* strncpy: copies at most n characters of t to s */
 void strncpyp(char *s, char *t, int n)
 {
-  while (n > 0 && (*t++ = *s++))
-  {
-    n--;
-  }
+  while (n-- > 0 && (*s++ = *t++))
+    ;
 }
 
 int main()
 {
-  char *t;
+  char *s;
 
-  strncpyp("asdqwe", t, 5);
+  strncpyp(s, "asdqwe", 5);
 
-  printf("print: %s\n", t);
+  printf("print: %s\n", s);
 
   return 0;
 }
