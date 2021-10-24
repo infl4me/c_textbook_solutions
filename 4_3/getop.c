@@ -11,6 +11,16 @@ int getop(char s[])
   s[1] = '\0';
 
   i = 0;
+  if (c == '!') // assume that everything between "!" and \n is a command (e.g. !clear)
+  {
+    while ((s[i++] = getch()) != '\n')
+      ;
+    s[--i] = '\0';
+
+    return COMMAND;
+  }
+
+  i = 0;
   if (c == '-')
   {
     c = getch();

@@ -6,6 +6,29 @@
 int sp = 0;         /* next free stack position */
 double val[MAXVAL]; /* value stack */
 
+void print_stack()
+{
+  int i;
+
+  if (!sp)
+  {
+    printf("Stack is empty\n");
+    return;
+  }
+
+  printf("Stack: ");
+  for (i = 0; i < sp; i++)
+    printf("%.2f ", val[i]);
+
+  printf("\n");
+}
+
+void clear_stack()
+{
+  sp = 0;
+  printf("Stack has been cleared\n");
+}
+
 /* push: push f onto value stack */
 void push(double f)
 {
