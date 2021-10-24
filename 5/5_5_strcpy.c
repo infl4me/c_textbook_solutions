@@ -9,7 +9,7 @@ void strncpyp(char *s, char *t, int n)
 
 int main()
 {
-  char *s;
+  char s[100];
 
   strncpyp(s, "asdqwe", 5);
 
