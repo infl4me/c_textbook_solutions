@@ -14,11 +14,11 @@ void strcatp(char *s, char *t)
 
 int main()
 {
-  char s[] = "asd", t[] = "qwe";
+  char s[100] = "asd", t[] = "qwe";
 
   strcatp(s, t);
 
-  printf("print: %s\n", s);
+  printf("Result: %s\n", s);
 
   return 0;
 }
